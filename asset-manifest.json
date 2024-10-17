@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/hw-08-phonebook/static/css/main.e4f5ed28.css",
+    "main.js": "/hw-08-phonebook/static/js/main.a472bf10.js",
+    "static/media/profileImg.png": "/hw-08-phonebook/static/media/profileImg.4660552709f9d2afa8c9.png",
+    "static/media/authBg.svg": "/hw-08-phonebook/static/media/authBg.a0442798c634e6d721c19d9a8ad6ab12.svg",
+    "static/media/accessBg.svg": "/hw-08-phonebook/static/media/accessBg.e97b4b6258d392487c1de98c3f8eaae0.svg",
+    "static/media/userInfoIcon.svg": "/hw-08-phonebook/static/media/userInfoIcon.d3a0f9e720bb078a6a9448e66e70872f.svg",
+    "static/media/modalClose.svg": "/hw-08-phonebook/static/media/modalClose.5dab6618e92eb4bc1e6bd7db367802c2.svg",
+    "static/media/logo.svg": "/hw-08-phonebook/static/media/logo.9c00044604272d3a965ad5f19d8fa258.svg",
+    "index.html": "/hw-08-phonebook/index.html",
+    "static/media/phonebookIcon.svg": "/hw-08-phonebook/static/media/phonebookIcon.9c2de26ddc66756af1e74e9b7e627825.svg",
+    "static/media/cursor.svg": "/hw-08-phonebook/static/media/cursor.540395416200283be2ad54af2f435825.svg",
+    "static/media/dateIcon.svg": "/hw-08-phonebook/static/media/dateIcon.13ccc43ce50d319fed0af95e0478088d.svg",
+    "static/media/feedbackIcon.svg": "/hw-08-phonebook/static/media/feedbackIcon.c469bf7e0a7f7b964c4b924ff9f7fbb5.svg",
+    "static/media/logOut.svg": "/hw-08-phonebook/static/media/logOut.95be5310cac057ad93e347d367d5e151.svg",
+    "static/media/authActiveBtnBg.svg": "/hw-08-phonebook/static/media/authActiveBtnBg.cdec327891d62389094a66cb2096c193.svg",
+    "static/media/accessActiveBtnBg.svg": "/hw-08-phonebook/static/media/accessActiveBtnBg.df48220d39746e863dfe04ace8a713c9.svg",
+    "main.e4f5ed28.css.map": "/hw-08-phonebook/static/css/main.e4f5ed28.css.map",
+    "main.a472bf10.js.map": "/hw-08-phonebook/static/js/main.a472bf10.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4f5ed28.css",
+    "static/js/main.a472bf10.js"
+  ]
+}
