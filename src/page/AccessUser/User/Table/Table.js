@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { StyledTableCell, StyledTableRow } from './Table.styled';
+import { nanoid } from 'nanoid';
 
 function createData(type, amount, currency) {
   return { type, amount, currency};
@@ -34,7 +35,7 @@ export default function CustomizedTables() {
 
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.type}>
+            <StyledTableRow key={nanoid()}>
               <StyledTableCell  align="center" addBorder>{row.type}</StyledTableCell>
               <StyledTableCell align="center" addBorder>{row.amount}</StyledTableCell>
               <StyledTableCell align="center">{row.currency}</StyledTableCell>

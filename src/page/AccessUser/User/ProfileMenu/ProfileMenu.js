@@ -1,8 +1,15 @@
-import { Box } from "../../../../utils/Box";
-import { ProfileDetailsContainer, ProfileBox , ProfileImg, ProfileInfo, ProfileUserName, ProfileUserEmail, ProfileStats, FollowersBox, ProfileStatsTitleBox, ProfileStatsTitle, Stats, ContactsBox, LikesBox, UploadStatsContainer, UploadStatsTitle, CategoryStats, CategoryPercent } from "./ProfileMenu.styled";
+import { ProfileDetailsContainer, ProfileBox , ProfileImg, ProfileInfo, ProfileUserName, ProfileUserEmail, ProfileStats, FollowersBox, ProfileStatsTitleBox, ProfileStatsTitle, Stats, ContactsBox, LikesBox, UploadStatsContainer, UploadStatsTitle, CategoryStats, CategoryPercent, BlueBox, OrangeBox, RedBox, CategoryStatsBox, Box} from "./ProfileMenu.styled";
 import {profileImg} from '../../../../image';
 import {useSelector} from 'react-redux';
 import {getUsername, getUserEmail} from '../../../../redux/auth';
+
+const array  = [
+	{name: ".docx", percent: "32%", color: "#4CC6F5"},
+	{name: ".mp4", percent: "42%", color: "#D88EA9"},
+	{name: ".pdf", percent: "4%", color: "#A03DF6"},
+	{name: ".mp3", percent: "17%", color: "#E54C65"},
+	{name: ".psd", percent: "87%", color: "#20B8C2"},
+]
 
 const ProfileMenu = () => {
 	const username = useSelector(getUsername);
@@ -20,11 +27,7 @@ const ProfileMenu = () => {
 				<ProfileStats>
 					<FollowersBox>
 						<ProfileStatsTitleBox>
-							<Box 
-							width="8px"
-							height="8px"
-							borderRadius="50%"
-							bg="#85C3FF"></Box>
+							<BlueBox/>
 							<ProfileStatsTitle>Followers</ProfileStatsTitle>
 						</ProfileStatsTitleBox>
 					<Stats>3,685</Stats>	
@@ -32,11 +35,7 @@ const ProfileMenu = () => {
 
 					<ContactsBox>
 					<ProfileStatsTitleBox>
-							<Box 
-							width="8px"
-							height="8px"
-							borderRadius="50%"
-							bg="#F2994A"></Box>
+							<OrangeBox/>
 							<ProfileStatsTitle>Contacts</ProfileStatsTitle>
 						</ProfileStatsTitleBox>
 					<Stats>10</Stats>	
@@ -44,11 +43,7 @@ const ProfileMenu = () => {
 
 					<LikesBox>
 					<ProfileStatsTitleBox>
-							<Box 
-							width="8px"
-							height="8px"
-							borderRadius="50%"
-							bg="#EC3A3A"></Box>
+							<RedBox/>
 							<ProfileStatsTitle>Likes</ProfileStatsTitle>
 						</ProfileStatsTitleBox>
 					<Stats>+3,685</Stats>	
@@ -60,29 +55,14 @@ const ProfileMenu = () => {
 			<UploadStatsContainer>
 				<UploadStatsTitle>Upload stats</UploadStatsTitle>
 
-				<Box display="grid"
-				gridTemplateColumns="1fr 1fr 1fr 1fr 1fr">
-					<Box bg="#4CC6F5" p="2.5px" display="flex" flexDirection="column" alignItems ="center" borderRadius="0px 0px 0px 8px">
-						<CategoryStats>.docx</CategoryStats>
-						<CategoryPercent>32%</CategoryPercent>
-					</Box>
-					<Box bg="#D88EA9" p="2.5px" display="flex" flexDirection="column" alignItems ="center">
-						<CategoryStats>.mp4</CategoryStats>
-						<CategoryPercent>42%</CategoryPercent>
-					</Box>
-					<Box bg="#A03DF6" p="2.5px" display="flex" flexDirection="column" alignItems ="center">
-						<CategoryStats>.pdf</CategoryStats>
-						<CategoryPercent>4%</CategoryPercent>
-					</Box>
-					<Box bg="#E54C65" p="2.5px" display="flex" flexDirection="column" alignItems ="center">
-						<CategoryStats>.mp3</CategoryStats>
-						<CategoryPercent>17%</CategoryPercent>
-					</Box>
-					<Box bg="#20B8C2" p="2.5px" display="flex" flexDirection="column" alignItems ="center" borderRadius="0px 0px 8px 0px">
-						<CategoryStats>.psd</CategoryStats>
-						<CategoryPercent>87%</CategoryPercent>
-					</Box>
-				</Box>
+				<CategoryStatsBox>
+					{array.map(({name, percent, color}) => (
+						<Box color={color} key={name}>
+							<CategoryStats>{name}</CategoryStats>
+							<CategoryPercent>{percent}</CategoryPercent>
+						</Box>
+					))}
+					</CategoryStatsBox>
 			</UploadStatsContainer>
 		</ProfileDetailsContainer>
 	)

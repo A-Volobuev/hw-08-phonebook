@@ -1,6 +1,5 @@
 import React from 'react';
-import {Box} from '../../../../utils/Box';
-import { List, ListItem, ButtonBox, ListText, DeleteIcon} from './ListContacts.styled';
+import { List, ListItem, ButtonBox, ListText, DeleteIcon, ListContactsBox} from './ListContacts.styled';
 
 import {useDispatch, useSelector } from 'react-redux';
 
@@ -18,7 +17,7 @@ export const ListContacts = ({contacts}) => {
 	);
 
 	return(
-		<Box>
+		<ListContactsBox>
 			<List>
           {visibleContacts.map(({id, name, number}) => (
 						<ListItem key={id}>
@@ -37,6 +36,6 @@ export const ListContacts = ({contacts}) => {
 					))}
 					{visibleContacts.length === 0 && <span> Not Find, try another name</span>}
       </List>
-		</Box>
+		</ListContactsBox>
 	)
 }

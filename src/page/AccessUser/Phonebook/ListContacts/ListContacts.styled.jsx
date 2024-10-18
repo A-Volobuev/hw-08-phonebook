@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { MdDelete } from "react-icons/md";
 import {cursor} from '../../../../image'
-
+export const ListContactsBox = styled.div`
+	
+`;
 export const List = styled.ul`
 	margin: 0px;
 	padding: 0px;

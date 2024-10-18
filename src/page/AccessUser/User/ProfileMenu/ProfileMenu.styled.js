@@ -109,3 +109,47 @@ export const CategoryPercent = styled.span`
 	line-height: ${(props) => props.theme.lineHeights.n};
 	color:  ${(props) => props.theme.color.whiteText};
 `;
+
+export const BlueBox = styled.div`
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #85C3FF;
+`;
+export const OrangeBox = styled.div`
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #F2994A;
+`;
+export const RedBox = styled.div`
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #EC3A3A;
+`;
+
+export const CategoryStatsBox = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+`;
+export const Box = styled.div`
+  background-color:  ${(props) => (props.color)};
+	padding: 2.5px; 
+	display:flex; 
+	flex-direction:column; 
+	align-items :center; 
+`;
+
+// export const CategoryStatsBox = styled.div`
+
+// `;
+// export const CategoryStatsBox = styled.div`
+
+// `;
+// export const CategoryStatsBox = styled.div`
+
+// `;
+// export const CategoryStatsBox = styled.div`
+
+// `;
